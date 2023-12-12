@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "6db1e809-d389-4944-bfbb-0e756864e8c3",
+		"name": "Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834293"
+	},
+	"item": [
+		{
+			"name": "Alta Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "cafe",
+							"type": "default"
+						},
+						{
+							"key": "precio",
+							"value": "150",
+							"type": "default"
+						},
+						{
+							"key": "tiempoEspera",
+							"value": "15",
+							"type": "default"
+						},
+						{
+							"key": "area",
+							"value": "Cocina",
+							"type": "default"
+						},
+						{
+							"key": "tipo",
+							"value": "Comida",
+							"type": "default"
+						},
+						{
+							"key": "stock",
+							"value": "25",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\" : \"stefano\",\r\n    \"clave\":\"ste123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Producto por Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/productos/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/productos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nombre\" : \"Hamburguesa doble\",\r\n    \"precio\" : \"750\",\r\n    \"tiempo\" : \"5\",\r\n    \"area\" : \"Cocina\",\r\n    \"tipo\" : \"Comida\",\r\n    \"stock\" : \"15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/productos/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "be492e92-be46-47b4-bced-dea6a97d7b64",
+		"name": "Mesas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834293"
+	},
+	"item": [
+		{
+			"name": "Alta Mesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "estado",
+							"value": "Libre",
+							"type": "default"
+						},
+						{
+							"key": "descripcion",
+							"value": "Mesa11",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/mesas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Mesas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/mesas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Mesa Por Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/mesas/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Mesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/mesas/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cerrar Mesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"estado\":\"Cerrada\",\r\n\"descripcion\":\"Se le rompio una pata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/mesas/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas",
+						"17"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado estados mesas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/mesas/estados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas",
+						"estados"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

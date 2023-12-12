@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "9498896f-744d-4779-a9f3-3fb5a3e365b8",
+		"name": "Pedidoss",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834293"
+	},
+	"item": [
+		{
+			"name": "Cargar Foto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxOTA5MTcsImV4cCI6MjI2MDk5MDkxNywiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.3Qopm5F1q6JJd5K1qYTbZn3hNjBjbtCS4HEfxJOtqq0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CodigoPedido",
+							"value": "jbx67yflgh",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Gigabyte/Desktop/fotopedido.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos/foto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"foto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE3Mzc0NDQsImV4cCI6MjMwNjUzNzQ0NCwiYXVkIjoiM2IxNzBjM2RmNTY0YWNmNjllYzVmOGY2MTZmZTUwNmMwMTY3MmYxNyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1OCwidXN1YXJpbyI6Im1vem8xIiwiY2xhdmUiOiJhc2Rhc2QifSwiYXBwIjoiVGVzdCBKV1QifQ.diwAYA1yO-jkcs2-yZUomo6fyqKXrLmAs2CEuFKQ0fY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdMesa\" : \"13\",\r\n    \"nombreCliente\" : \"Ernesto\",\r\n    \"productosPedidos\":[\r\n        {\r\n            \"idProducto\" : \"142\",\r\n            \"cantidad\" : \"1\"\r\n        },\r\n        {\r\n            \"idProducto\" : \"138\",\r\n            \"cantidad\" : \"2\"\r\n        },\r\n        {\r\n            \"idProducto\" : \"139\",\r\n            \"cantidad\" : \"1\"\r\n        },\r\n        {\r\n            \"idProducto\" : \"98\",\r\n            \"cantidad\" : \"1\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancelar Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/cancelar/b1369nx5v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"cancelar",
+						"b1369nx5v2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Pedidos/Detalles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos/29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1Mzk1NTEsImV4cCI6MjI2MDMzOTU1MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.iyW-iwOS0sXVdO3Ti-G_qHv3InAvYk8_5_H_noJXdpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Estado\" : \"Entregado\",\r\n    \"Puntuacion\" : \"7\" ,\r\n    \"Comentario\" : \"Lo mejor que probe.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos/25\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"25\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servir Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxOTA5MTcsImV4cCI6MjI2MDk5MDkxNywiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.3Qopm5F1q6JJd5K1qYTbZn3hNjBjbtCS4HEfxJOtqq0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/servido/jbx67yflgh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"servido",
+						"jbx67yflgh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cobrar Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxOTA5MTcsImV4cCI6MjI2MDk5MDkxNywiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.3Qopm5F1q6JJd5K1qYTbZn3hNjBjbtCS4HEfxJOtqq0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/cobrado/jbx67yflgh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"cobrado",
+						"jbx67yflgh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pedido Preparado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxOTA5MTcsImV4cCI6MjI2MDk5MDkxNywiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.3Qopm5F1q6JJd5K1qYTbZn3hNjBjbtCS4HEfxJOtqq0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/preparado/jbx67yflgh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"preparado",
+						"jbx67yflgh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos en preparacion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/preparando",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"preparando"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos Preparados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/preparados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"preparados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos Servidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/servidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"servidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos Cancelados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/cancelados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"cancelados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos Cobrados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/cobrados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"cobrados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pedidos Encuestados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/encuestados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"encuestados"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

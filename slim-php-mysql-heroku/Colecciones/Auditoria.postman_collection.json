@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "f654d18a-689e-4a34-951f-72acd3be3caf",
+		"name": "Auditoria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834293"
+	},
+	"item": [
+		{
+			"name": "Auditoria General",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/auditoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"auditoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auditoria de Usuario por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/auditoria/55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"auditoria",
+						"55"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

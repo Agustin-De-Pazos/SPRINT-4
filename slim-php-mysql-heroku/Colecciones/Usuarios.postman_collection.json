@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "f67256f5-51f4-45d6-ac2e-5ee7be0883af",
+		"name": "Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834293"
+	},
+	"item": [
+		{
+			"name": "Alta Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxODM4OTgsImV4cCI6MjI2MDk4Mzg5OCwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.Nu3Kayr5SBpwIsJPrvv411ynrw0OrmzO7NaMb-GCAGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Santino",
+							"type": "default"
+						},
+						{
+							"key": "apellido",
+							"value": "Rufo",
+							"type": "default"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "puesto",
+							"value": "Bartender",
+							"type": "default"
+						},
+						{
+							"key": "idArea",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "idUsuarioTipo",
+							"value": "5",
+							"type": "default"
+						},
+						{
+							"key": "usuarioPostman",
+							"value": "adm1",
+							"type": "default"
+						},
+						{
+							"key": "clavePostman",
+							"value": "clave123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/usuarios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/usuarios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuarios por Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzk2OTAsImV4cCI6MjI2MDk3OTY5MCwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.LtYJGmT7eXZ9E6Ch0Zb0yUMN7lf5AboRQp9nfPh7wV4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/usuarios/55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						"55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1MzczNjEsImV4cCI6MjI2MDMzNzM2MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.uymlTBthpH1x7WLZ51pFKr_iaVU509HNAyukjFEQFLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/usuarios/51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						"51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTU1MzczNjEsImV4cCI6MjI2MDMzNzM2MSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJ1c3VhcmlvIjoic3RlZmFubyIsImNsYXZlIjoic3RlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.uymlTBthpH1x7WLZ51pFKr_iaVU509HNAyukjFEQFLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\":\"userMod\",\r\n    \"clave\":\"claveMod\",\r\n    \"nombre\":\"nombreMod\",\r\n    \"apellido\":\"apellidoMod\",\r\n    \"puesto\":\"bartender\",\r\n    \"idUsuarioTipo\":\"6\",\r\n    \"idArea\":\"14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/usuarios/50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suspender Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYxNzg0OTUsImV4cCI6MjI2MDk3ODQ5NSwiYXVkIjoiYTYyNWNhYzBmNmNiODMwMmUxNDQ5MzVhZTg2OWQ5YjA4Mzk2NDQ4YyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1NSwidXN1YXJpbyI6IlN0ZWZhbm8iLCJjbGF2ZSI6ImNsYXZlMTIzIn0sImFwcCI6IlRlc3QgSldUIn0.u07r_Q8mGva23eUxfQGUnjlgGvDnQFci3x--_EJGZd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/usuarios/suspender/59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios",
+						"suspender",
+						"59"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
